@@ -1,0 +1,44 @@
+.page {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 62px 117px 69px 112px;
+  background-image: url("../img/background.jpg");
+  background-repeat: repeat;
+  background-position: -55px -70px;
+
+  &__subtitle {
+    @include text(24px, 48.83px, 700);
+    margin: 0 0 -3px -2px;
+
+    &--js {
+      margin-left: 1px;
+    }
+
+    &--about {
+      margin-left: 0px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    @include text(15px, 23px, 400);
+    margin: 0;
+    letter-spacing: -0.004em;
+
+    &--offset {
+      margin-left: 3px;
+    }
+  }
+
+  &__skills {
+    padding-bottom: 38px;
+  }
+
+  &__about {
+    padding-bottom: 32px;
+  }
+
+  &__date {
+    padding-top: 76px;
+  }
+}

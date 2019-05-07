@@ -1,0 +1,21 @@
+.input-radio {
+
+  &__input:checked + .input-radio__label::before {
+    @include sprite($s-radio-checked)
+  }
+
+  &__label {
+    @include text(20px, 25px, 700);
+    color: $black;
+    position: relative;
+    padding-left: 32px;
+
+    &::before {
+      @include sprite($s-radio);
+      position: absolute;
+      top: -9px;
+      left: -8px;
+      content: '';
+    }
+  }
+}

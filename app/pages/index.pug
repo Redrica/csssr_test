@@ -1,0 +1,55 @@
+include ../blocks/mixins/mixins.pug
+
+-var pageTitle = 'CSSSR Test';
+-var pageDescription = 'Vacancy test';
+-var pageKeywords = 'html css pug scss javascript frontend';
+
+doctype html
+html(lang='ru')
+    include ../blocks/head/head
+
+    body
+        main.page
+            include ../blocks/header/header
+            .page__personal
+                h2.visually-hidden Персональные данные
+                +block-fields()
+            .page__skills
+                h2.page__subtitle Расскажите о себе чекбоксами
+                p.page__text
+                    |Отметьте чекбоксами пункты, которые соответствуют вашим скиллам.
+                    |Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей.
+                    |Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
+                +block-checkboxes()
+            .page__js
+                h2.page__subtitle.page__subtitle--js Уровень владения JavaScript
+
+            .page__about
+                h2.page__subtitle.page__subtitle--about Расскажите о себе словами
+                p.page__text.page__text--offset
+                    |Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR.
+                    |Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
+                +input-field('input-field--no-flex', {
+                    inputClass: 'input-field__textarea',
+                    isTextarea: true,
+                    inputAttr: {
+                        id: 'text',
+                        value: 'Ну-ууу-уу...\n' + 'Ээээ...',
+                        rows: 2
+                    }
+                })
+            .page__plans
+                h2.page__subtitle Какие у вас планы на будущее?
+                p.page__text
+                    |Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
+                +block-radio()
+            .page__date
+                +input-field('', {
+                    inputClass: 'input-field__input--date',
+                    labelText: 'Дата заполнения',
+                    inputAttr: {
+                        id: 'date',
+                        value: '08.05.2019'
+                    }
+                })
+

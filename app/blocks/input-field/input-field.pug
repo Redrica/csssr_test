@@ -1,0 +1,28 @@
+//- использование
+    +input-field(elemClass - дополнительный класс для элемента вышестоящего блока,
+    { ВСЕ ПАРЫ - ОПЦИОНАЛЬНЫ
+        isTextarea: true/false, - будет текстовая область/поле ввода
+        labelText: '', - текст подписи
+        labelAria: '', - текст атрибута aria-label (при необходимости)
+        inputAttr: { - объект с атрибутами для инпута, ключ - любой допустимый атрибут
+            id: '',
+            name: '', - если не передать, запишется id
+            value: '',
+        },
+        labelAttr: { - объект с дополнительными атрибутами для label (при необходимости)
+        }
+    })
+
+mixin input-field(elemClass, inputProps)
+    if (typeof(inputProps) === 'undefined')
+        -var inputProps = {}
+
+    .input-field(class=elemClass)
+        if (inputProps.isTextarea === true)
+            textarea.input-field__input(class=inputProps.inputClass)&attributes(inputProps.inputAttr)= inputProps.inputAttr.value
+        else
+            input.input-field__input(
+                class=inputProps.inputClass,
+                type=inputProps.inputAttr.type ? inputProps.inputAttr.type : 'text',
+                name=inputProps.inputAttr.name ? inputProps.inputAttr.name : inputProps.inputAttr.id)&attributes(inputProps.inputAttr)
+        label.input-field__label(for=inputProps.inputAttr.id, aria-label=inputProps.labelAria)&attributes(inputProps.labelAttr)= inputProps.labelText

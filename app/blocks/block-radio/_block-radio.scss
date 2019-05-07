@@ -1,0 +1,12 @@
+.block-radio {
+  display: flex;
+  padding-top: 16px;
+
+  &__item {
+    margin-right: 21px;
+
+    &:nth-child(2) {
+      margin-right: 25px;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+/* текстовое поле ввода или селект */
+
+.input-field {
+  position: relative;
+  display: flex;
+
+  &--no-flex {
+    display: block;
+  }
+
+  &__input {
+    @include text(30px, 36px, 400);
+    order: 1;
+    font-family: $courier;
+    width: 100%;
+    height: 50px;
+    padding: 0 0 9px 13px;
+    color: $user-text;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    background-image: url("../img/line_1.png");
+    background-repeat: repeat-x;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+
+    &--name {
+      padding-left: 15px;
+      background-size: 100%;
+      background-position: 0 41px;
+    }
+
+    &--birth {
+      background-position: -9px 44px;
+    }
+
+    &--home {
+      padding-bottom: 5px;
+      background-position: -49px 41px;
+    }
+
+    &--skype {
+      padding-bottom: 4px;
+      background-image: url("../img/line_2.png");
+      background-position: 0 41px;
+    }
+
+    &--email {
+      background-image: url("../img/line_2.png");
+      background-position: 0 38px;
+    }
+
+    &--date {
+      width: 207px;
+      padding-left: 0;
+      padding-right: 6px;
+      text-align: center;
+      background-image: url("../img/line_2.png");
+      background-position: -53px 39px;;
+    }
+  }
+
+  &__label {
+    @include text(22.43px, 49.83px, 700);
+    flex-shrink: 0;
+    margin: 10px 15px 0 0;
+    color: $title;
+  }
+
+  &__textarea {
+    @include text(30px, 60px, 400);
+    width: 100%;
+    height: auto;
+    margin: 25px 0 0 0;
+    padding-left: 3px;
+    color: $user-text;
+    background-image: url("../img/line_t-area.png");
+    background-size: 100%;
+    background-position: 0 19px;
+    background-repeat: repeat;
+  }
+}

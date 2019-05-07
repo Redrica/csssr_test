@@ -1,0 +1,29 @@
+//- использование
+    +input-checkbox({ ВСЕ ПАРЫ - ОПЦИОНАЛЬНЫ
+                    elemClass: '', - дополнительный класс для элемента вышестоящего блока
+                    isShown: true/false, - дефолтный чекбокс / предусмотрена настройка отображения
+                    labelText: '', - текст подписи
+                    labelAria: '', - текст атрибута aria-label (при необходимости)
+                    inputAttr: { - объект с атрибутами для инпута, ключ - любой допустимый атрибут
+                        value: '',
+                        id: '',
+                        name: '', - если не передать, запишется id
+                        placeholder: ''
+                    },
+                    labelAttr: { - объект с дополнительными атрибутами для label (при необходимости)
+
+                    }
+                })
+
+mixin input-checkbox(elemClass, inputProps)
+    if (typeof(inputProps) === 'undefined')
+        -var inputProps = {}
+
+    .input-checkbox(class=elemClass)
+        input.input-checkbox__input(type='checkbox',
+            class=(inputProps.isShown === true) ? '' : 'visually-hidden',
+            name=inputProps.inputAttr.name ? inputProps.inputAttr.name : inputProps.inputAttr.id,
+            value=inputProps.inputAttr.value ? inputProps.inputAttr.value : inputProps.inputAttr.id,
+            checked=(inputProps.inputAttr.checked === true) ? checked : false)&attributes(inputProps.inputAttr)
+        label.input-checkbox__label(class=inputProps.labelClass, for=inputProps.inputAttr.id, aria-label=inputProps.labelAria)&attributes(inputProps.labelAttr)= inputProps.labelText
+            block

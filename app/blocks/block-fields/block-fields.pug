@@ -1,0 +1,46 @@
+mixin block-fields(elemClass)
+
+    .block-fields(class=elemClass)
+        -var inputClass = 'block-fields__item'
+
+        +input-field(inputClass, {
+            labelText: 'Полное ФИО',
+            inputClass: 'input-field__input--name',
+            inputAttr: {
+                id: 'name',
+                value: 'Винокурова Елизавета Олеговна'
+            }
+        })
+        +input-field(inputClass,{
+            labelText: 'Год рождения',
+            inputClass: 'input-field__input--birth',
+            inputAttr: {
+                id: 'birth',
+                value: '1980'
+            }
+        })
+        +input-field(inputClass,{
+            labelText: 'Место жительства',
+            inputClass: 'input-field__input--home',
+            inputAttr: {
+                id: 'home',
+                value: 'г. Москва, Россия'
+            }
+        })
+        +input-field(inputClass,{
+            labelText: 'Скайп',
+            inputClass: 'input-field__input--skype',
+            inputAttr: {
+                id: 'skype',
+                value: 'elizaveta.vinokurova'
+            }
+        })
+        +input-field(inputClass,{
+            labelText: 'Почта',
+            inputClass: 'input-field__input--email',
+            inputAttr: {
+                id: 'email',
+                value: 'de.spring@gmail.com',
+                type: 'email'
+            }
+        })

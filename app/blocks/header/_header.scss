@@ -1,0 +1,21 @@
+.header {
+  position: relative;
+
+  &::after {
+    @include sprite($s-stamp);
+    position: absolute;
+    top: -14px;
+    right: -64px;
+    content: "";
+  }
+
+  &__logo {
+
+  }
+
+  &__title {
+    @include sprite($s-profile);
+    width: 260px;
+    margin: 37px auto 0;
+  }
+}

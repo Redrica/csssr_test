@@ -1,0 +1,54 @@
+{
+  "name": "CSSSR_test",
+  "version": "1.0.0",
+  "description": "vacancy test project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp develop",
+    "start": "npm run build && gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Redrica/csssr_test.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "scss",
+    "pug",
+    "gulp"
+  ],
+  "author": "Elizaveta Vinokurova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Redrica/csssr_test/issues"
+  },
+  "homepage": "https://github.com/Redrica/csssr_test#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "browser-sync": "^2.26.5",
+    "del": "^4.1.1",
+    "gulp": "^3.9.1",
+    "gulp-cheerio": "^0.6.3",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgmin": "^2.2.0",
+    "gulp.spritesmith": "^6.9.0",
+    "run-sequence": "^2.2.1"
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
+}

@@ -1,0 +1,24 @@
+//- использование
+    +input-radio(elemClass - дополнительный класс для элемента вышестоящего блока,
+    { ВСЕ ПАРЫ - ОПЦИОНАЛЬНЫ
+        labelText: '', - текст подписи
+        labelAria: '', - текст атрибута aria-label (при необходимости)
+        inputAttr: { - объект с атрибутами для инпута, ключ - любой допустимый атрибут
+            id: '',
+            name: '', - если не передать, запишется id
+            value: '', - если не передать, запишется id
+        },
+        labelAttr: { - объект с дополнительными атрибутами для label (при необходимости)
+        }
+    })
+
+mixin input-radio(elemClass, inputProps)
+    if (typeof(inputProps) === 'undefined')
+        -var inputProps = {}
+
+    .input-radio(class=elemClass)
+        input.input-radio__input(type='radio',
+            class=(inputProps.isShown === true) ? '' : 'visually-hidden',
+            name=inputProps.inputAttr.name ? inputProps.inputAttr.name : inputProps.inputAttr.id,
+            checked=(inputProps.inputAttr.checked === true) ? checked : false)&attributes(inputProps.inputAttr)
+        label.input-radio__label(for=inputProps.inputAttr.id, aria-label=inputProps.labelAria)&attributes(inputProps.labelAttr)= inputProps.labelText

@@ -1,0 +1,141 @@
+mixin block-checkboxes(elemClass)
+
+    .block-checkboxes(class=elemClass)
+        -var inputClass = 'block-checkboxes__item'
+
+        +input-checkbox(inputClass, {
+            labelText: 'БЭМ/OOCSS',
+            inputAttr: {
+                id: 'bem',
+                checked: true
+            }
+        })
+        +input-checkbox(inputClass, {
+            labelText: 'Pug (Jade)',
+            inputAttr: {
+                id: 'pug',
+                checked: true
+            }
+        })
+        +input-checkbox(inputClass, {
+            labelText: 'Stylus/LESS/SASS',
+            inputAttr: {
+                id: 'precss',
+                checked: true
+            }
+        })
+        +input-checkbox(inputClass, {
+            labelText: 'Работаю с SVG',
+            inputAttr: {
+                id: 'svg',
+                checked: true
+            }
+        })
+        +input-checkbox(inputClass, {
+            labelText: 'Верстаю семантично',
+            inputAttr: {
+                id: 'semantic',
+                checked: true
+            }
+        })
+        +input-checkbox(inputClass, {
+            labelText: 'Accessibility (A11Y)',
+            inputAttr: {
+                id: 'semantic',
+                checked: true
+            }
+        })
+        +input-checkbox(inputClass, {
+            labelText: 'ES2015/ES2016',
+            inputAttr: {
+                id: 'js-vers'
+            }
+        })
+        +input-checkbox(inputClass, {
+            labelText: 'Gulp/GRUNT',
+            inputAttr: {
+                id: 'taskrunner',
+                checked: true
+            }
+        })
+        +input-checkbox(inputClass, {
+               labelText: 'Webpack',
+               inputAttr: {
+                   id: 'webpack'
+               }
+           })
+        +input-checkbox(inputClass, {
+               labelText: 'Дружу с WebGL',
+               inputAttr: {
+                   id: 'webgl'
+               }
+           })
+        +input-checkbox(inputClass, {
+            labelText: 'jQuery',
+            inputAttr: {
+                id: 'jquery',
+                checked: true
+            }
+        })
+        +input-checkbox(inputClass, {
+            labelText: 'Знаю/изучаю Angular',
+            inputAttr: {
+                id: 'angular'
+            }
+        })
+        +input-checkbox(inputClass, {
+            labelText: 'Знаю/изучаю React',
+            inputAttr: {
+                id: 'react'
+            }
+        })
+        +input-checkbox(inputClass, {
+            labelText: 'Знаю/изучаю Node.js',
+            inputAttr: {
+                id: 'node'
+            }
+        })
+        +input-checkbox(inputClass, {
+            labelText: 'Использую Git',
+            labelClass: 'input-checkbox__label--box-offset',
+            inputAttr: {
+                id: 'git',
+                checked: true
+            }
+        })
+        +input-checkbox(inputClass, {
+            labelText: 'С',
+            labelClass: 'input-checkbox__label--box-offset',
+            inputAttr: {
+                id: 'falcon-eye',
+                checked: true
+            }
+        })
+            block label
+                span глазомером
+                span всё
+                span ок
+        +input-checkbox(inputClass, {
+            labelText: 'Читаю',
+            labelClass: 'input-checkbox__label--offset input-checkbox__label--box-offset',
+            inputAttr: {
+                id: 'read-blog'
+            }
+        })
+            block label
+                a(href='http://blog.csssr.ru/') blog.csssr.ru
+        +input-checkbox(inputClass, {
+            labelText: 'Я ленивый(-ая)',
+            labelClass: 'input-checkbox__label--offset input-checkbox__label--box-offset',
+            inputAttr: {
+                id: 'lazy'
+            }
+        })
+        +input-checkbox(inputClass, {
+            labelText: 'У меня хороший английский',
+            labelClass: 'input-checkbox__label--offset input-checkbox__label--box-offset',
+            inputAttr: {
+                id: 'english',
+                checked: true
+            }
+        })

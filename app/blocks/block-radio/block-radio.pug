@@ -1,0 +1,33 @@
+mixin block-radio(elemClass)
+
+    .block-radio(class=elemClass)
+        -var inputClass = 'block-radio__item'
+        +input-radio(inputClass, {
+            labelText: 'Верстать',
+            inputAttr: {
+                id: 'layout',
+                name: 'plans'
+            }
+        })
+        +input-radio(inputClass, {
+            labelText: 'Прокачиваться в JS',
+            inputAttr: {
+                id: 'js',
+                name: 'plans',
+                checked: true
+            }
+        })
+        +input-radio(inputClass, {
+            labelText: 'Менеджерство',
+            inputAttr: {
+                id: 'manager',
+                name: 'plans'
+            }
+        })
+        +input-radio(inputClass, {
+            labelText: 'Другое',
+            inputAttr: {
+                id: 'another',
+                name: 'plans'
+            }
+        })
