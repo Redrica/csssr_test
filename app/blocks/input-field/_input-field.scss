@@ -4,6 +4,10 @@
   position: relative;
   display: flex;
 
+  @include mobile {
+    flex-direction: column;
+  }
+
   &--no-flex {
     display: block;
   }
@@ -24,6 +28,16 @@
     background-repeat: repeat-x;
     box-shadow: none;
 
+    @include tablet {
+      font-size: 26px;
+      background-size: 100%;
+    }
+
+    @include mobile {
+      padding-left: 0;
+      font-size: 22px;
+    }
+
     &:hover,
     &:focus {
       outline: none;
@@ -33,15 +47,27 @@
       padding-left: 15px;
       background-size: 100%;
       background-position: 0 41px;
+
+      @include mobile {
+        padding-left: 0;
+      }
     }
 
     &--birth {
       background-position: -9px 44px;
+
+      @include tablet {
+        background-position-x: right;
+      }
     }
 
     &--home {
       padding-bottom: 5px;
       background-position: -49px 41px;
+
+      @include tablet {
+        background-position-x: right;
+      }
     }
 
     &--skype {
@@ -61,7 +87,11 @@
       padding-right: 6px;
       text-align: center;
       background-image: url("../img/line_2.png");
-      background-position: -53px 39px;;
+      background-position: -53px 39px;
+
+      @include tablet {
+        background-size: auto;
+      }
     }
   }
 
@@ -70,20 +100,9 @@
     flex-shrink: 0;
     margin: 10px 15px 0 0;
     color: $title;
-  }
 
-  &__textarea {
-    @include text(30px, 60px, 400);
-    width: 100%;
-    height: auto;
-    min-height: 130px;
-    margin: 25px 0 0 0;
-    padding-left: 3px;
-    color: $user-text;
-    background-image: url("../img/line_t-area.png");
-    background-size: 100%;
-    background-position: 0 19px;
-    background-repeat: repeat;
-    resize: vertical;
+    @include mobile {
+      @include text(18px, 36px, 700);
+    }
   }
 }

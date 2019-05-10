@@ -39,19 +39,3 @@ input[type="file"].visually-hidden {
   border: 0;
   clip-path: inset(100%);
 }
-
-.slider {
-  position: relative;
-  width: 100%;
-  height: 150px;
-  background-color: yellowgreen;
-
-  &__control {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background-color: #fb9359;
-    border: 2px solid #b26c2e;
-    border-radius: 50%;
-  }
-}

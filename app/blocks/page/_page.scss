@@ -1,5 +1,4 @@
 .page {
-  //width: 100%;
   width: 1000px;
   margin: 0 auto;
   padding: 62px 117px 69px 112px;
@@ -7,9 +6,24 @@
   background-repeat: repeat;
   background-position: -55px -70px;
 
+  @include tablet {
+    width: 100%;
+    padding: 60px;
+  }
+
+  @include mobile {
+    min-width: 360px;
+    padding: 40px 30px;
+  }
+
   &__subtitle {
     @include text(24px, 48.83px, 700);
     margin: 0 0 -3px -2px;
+
+    @include mobile {
+      margin-bottom: 18px;
+      line-height: 28px;
+    }
 
     &--js {
       margin-left: 1px;
@@ -18,6 +32,10 @@
     &--about {
       margin-left: 0;
       margin-bottom: 0;
+
+      @include mobile {
+        margin-bottom: 18px;
+      }
     }
   }
 
@@ -32,14 +50,41 @@
   }
 
   &__skills {
-    padding-bottom: 38px;
+    margin-bottom: 44px;
   }
 
   &__about {
-    padding-bottom: 32px;
+    margin-bottom: 23px;
   }
 
   &__date {
-    padding-top: 76px;
+    margin-top: 76px;
+
+    @include mobile {
+      margin-top: 30px;
+    }
+  }
+
+  &__text-field {
+    @include text(30px, 60px, 400);
+    width: 100%;
+    height: auto;
+    min-height: 190px;
+    margin: 25px 0 0 0;
+    padding-left: 3px;
+    font-family: $courier;
+    color: $user-text;
+    background-image: url("../img/line_t-area.png");
+    background-size: auto;
+    background-position: 0 19px;
+    background-repeat: repeat;
+
+    @include mobile {
+      font-size: 24px;
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 }

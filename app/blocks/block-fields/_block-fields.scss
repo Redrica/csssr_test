@@ -2,6 +2,10 @@
   padding-top: 50px;
   padding-bottom: 42px;
 
+  @include mobile {
+    padding-top: 25px;
+  }
+
   &__item {
 
     &:nth-child(2) {

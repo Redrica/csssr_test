@@ -1,0 +1,132 @@
+.slider {
+  padding-top: 19px;
+  padding-bottom: 21px;
+
+  @include mobile {
+    padding-bottom: 40px;
+  }
+
+  &__area {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    background-image: url("../img/line_t-area.png");
+    background-size: auto;
+    background-position: 3px -12px;
+    background-repeat: no-repeat;
+
+    @include tablet {
+      background-position: 0 -12px;
+      background-repeat: repeat-x;
+    }
+  }
+
+  &__control {
+    @include sprite($s-triangle);
+    position: absolute;
+    top: -2px;
+    left: 30%;
+    width: 17px;
+    height: 14px;
+    cursor: pointer;
+  }
+
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 23px 0 0;
+    list-style: none;
+
+    @include mobile {
+      position: relative;
+      width: 100%;
+      padding-top: 24px;
+    }
+  }
+
+  &__item {
+    @include text(13px, 19px, 700);
+    position: relative;
+    padding-left: 1px;
+    color: $title;
+
+    @include mobile {
+      @include text(13px, 14px, 700);
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: -27px;
+    }
+
+    &--no-js {
+      width: 18.68%;
+      padding-top: 2px;
+
+      @include tablet {
+        padding-right: 15px;
+      }
+
+      &::before {
+        @include sprite($s-vert-line-long);
+
+        @include mobile {
+        }
+      }
+    }
+
+    &--junior {
+      width: 29.44%;
+
+      @include tablet {
+        padding-right: 15px;
+      }
+
+      &::before {
+        @include sprite($s-vert-line-short);
+        top: -26px;
+        left: 6px;
+
+        @include mobile {
+        }
+      }
+    }
+
+    &--middle {
+      width: 33.59%;
+      padding-right: 90px;
+
+      @include tablet {
+        padding-right: 20px;
+      }
+
+      &::before {
+        @include sprite($s-vert-line-short);
+        top: -26px;
+        left: 4px;
+
+        @include mobile {
+        }
+      }
+    }
+
+    &--senior {
+      width: 18.29%;
+      padding-top: 7px;
+
+      @include tablet {
+        padding-top: 0;
+        text-align: right;
+      }
+
+      &::before {
+        @include sprite($s-vert-line-long);
+        right: 0;
+
+        @include mobile {
+        }
+      }
+    }
+  }
+}

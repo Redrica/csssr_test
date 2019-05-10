@@ -23,23 +23,17 @@ html(lang='ru')
                 +block-checkboxes()
             .page__js
                 h2.page__subtitle.page__subtitle--js Уровень владения JavaScript
-                .slider
-                    .slider__control
-
+                include ../blocks/slider/slider
             .page__about
                 h2.page__subtitle.page__subtitle--about Расскажите о себе словами
                 p.page__text.page__text--offset
                     |Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR.
                     |Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
-                +input-field('input-field--no-flex', {
-                    inputClass: 'input-field__textarea',
-                    isTextarea: true,
-                    inputAttr: {
-                        id: 'text',
-                        value: 'Ну-ууу-уу...\n' + 'Ээээ...',
-                        rows: 2
-                    }
-                })
+                .page__text-field(contenteditable='true') Первое позитивное впечатление от того, что вакансия написана с некоторой долей юмора: приятно работать с людьми, которые умеют улыбаться в тексте. Современный, легкий для восприятия сайт, интересные проекты, – вот и захотелось присоединиться к общему делу.
+                    br
+                    | Чего я ожидаю? Работы :-) Такой, чтобы было интересно, чтобы было над чем подумать, чтобы можно было сделать красиво.
+                    br
+                    |Искренне надеюсь, что наши с CSSSR интересы совпадут и мы объединимся во имя общего блага :-D
             .page__plans
                 h2.page__subtitle Какие у вас планы на будущее?
                 p.page__text
@@ -51,7 +45,7 @@ html(lang='ru')
                     labelText: 'Дата заполнения',
                     inputAttr: {
                         id: 'date',
-                        value: '08.05.2019'
+                        value: '10.05.2019'
                     }
                 })
         script(src='js/script.min.js')

@@ -4,96 +4,18 @@
   font-weight: $font-weight;
 }
 
-//@mixin mobile {
-//  @media (min-width: #{$width-mobile}) {
-//    @content;
-//  }
-//}
-//
-//@mixin mobile-wide {
-//  @media (min-width: #{$width-mobile-wide}) {
-//    @content;
-//  }
-//}
-//
-//@mixin tablet {
-//  @media (min-width: #{$width-tablet}) {
-//    @content;
-//  }
-//}
-//
-//@mixin tablet-middle {
-//  @media (min-width: #{$width-tablet-middle}) {
-//    @content;
-//  }
-//}
-//
-//@mixin desktop-start {
-//  @media (min-width: #{$width-desktop-start}) {
-//    @content;
-//  }
-//}
-//
-//@mixin laptop {
-//  @media (min-width: #{$width-laptop}) {
-//    @content;
-//  }
-//}
-//
-//@mixin desktop-wide {
-//  @media (min-width: #{$width-desktop-wide}) {
-//    @content;
-//  }
-//}
-//
-//@mixin desktop-full {
-//  @media (min-width: #{$width-desktop-full}) {
-//    @content;
-//  }
-//}
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
 
-//@mixin mobile {
-//  @media (max-width: #{$mobile}) {
-//    @content;
-//  }
-//}
-//
-//@mixin wide-mobile {
-//  @media (max-width: #{$wide-mobile}) {
-//    @content;
-//  }
-//}
-//
-//@mixin tablet {
-//  @media (max-width: #{$tablet}) {
-//    @content;
-//  }
-//}
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
 
-// The provided mixins are intended to be used with the array-like variables
-//
-// .icon-home {
-//   @include sprite-width($icon-home);
-// }
-//
-// .icon-email {
-//   @include sprite($icon-email);
-// }
-//
-// Example usage in HTML:
-//
-// `display: block` sprite:
-// <div class="icon-home"></div>
-//
-// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
-//
-// // CSS
-// .icon {
-//   display: inline-block;
-// }
-//
-// // HTML
-// <i class="icon icon-home"></i>
 @mixin sprite-width($sprite) {
   width: nth($sprite, 5);
 }

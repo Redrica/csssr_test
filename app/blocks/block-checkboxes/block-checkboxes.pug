@@ -95,7 +95,7 @@ mixin block-checkboxes(elemClass)
                 id: 'node'
             }
         })
-        +input-checkbox(inputClass, {
+        +input-checkbox((inputClass + ' block-checkboxes__item--margin-bug'), {
             labelText: 'Использую Git',
             labelClass: 'input-checkbox__label--box-offset',
             inputAttr: {
@@ -103,7 +103,7 @@ mixin block-checkboxes(elemClass)
                 checked: true
             }
         })
-        +input-checkbox(inputClass, {
+        +input-checkbox((inputClass + ' block-checkboxes__item--margin-bug'), {
             labelText: 'С',
             labelClass: 'input-checkbox__label--box-offset',
             inputAttr: {
@@ -115,25 +115,25 @@ mixin block-checkboxes(elemClass)
                 span глазомером
                 span всё
                 span ок
-        +input-checkbox(inputClass, {
+        +input-checkbox((inputClass + ' block-checkboxes__item--margin-bug'), {
             labelText: 'Читаю',
-            labelClass: 'input-checkbox__label--offset input-checkbox__label--box-offset',
+            labelClass: 'input-checkbox__label--offset input-checkbox__label--box-offset  input-checkbox__label--bug',
             inputAttr: {
                 id: 'read-blog'
             }
         })
             block label
                 a(href='http://blog.csssr.ru/') blog.csssr.ru
-        +input-checkbox(inputClass, {
+        +input-checkbox((inputClass + ' block-checkboxes__item--margin-bug'), {
             labelText: 'Я ленивый(-ая)',
-            labelClass: 'input-checkbox__label--offset input-checkbox__label--box-offset',
+            labelClass: 'input-checkbox__label--offset input-checkbox__label--box-offset input-checkbox__label--bug',
             inputAttr: {
                 id: 'lazy'
             }
         })
-        +input-checkbox(inputClass, {
+        +input-checkbox((inputClass + ' block-checkboxes__item--margin-bug'), {
             labelText: 'У меня хороший английский',
-            labelClass: 'input-checkbox__label--offset input-checkbox__label--box-offset',
+            labelClass: 'input-checkbox__label--offset input-checkbox__label--box-offset input-checkbox__label--word-wrap input-checkbox__label--bug',
             inputAttr: {
                 id: 'english',
                 checked: true

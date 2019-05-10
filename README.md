@@ -1,2 +1,2 @@
-# start_project
-Basic project for a website with structure, common files and gulpfile.js
+# CSSSR_test
+Vacancy test for CSSSR.ru

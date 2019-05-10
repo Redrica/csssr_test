@@ -2,11 +2,28 @@
   display: flex;
   padding-top: 16px;
 
+  @media (max-width: 799px) {
+    flex-wrap: wrap;
+  }
+
+  @include mobile {
+    padding-top: 24px;
+  }
+
   &__item {
     margin-right: 21px;
 
     &:nth-child(2) {
       margin-right: 25px;
+    }
+
+    @media (max-width: 799px) {
+      width: 40%;
+      margin-bottom: 25px;
+    }
+
+    @include mobile {
+      width: 100%;
     }
   }
 }

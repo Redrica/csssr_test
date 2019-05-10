@@ -1,27 +1,29 @@
 .input-checkbox {
+  display: inline-block;
 
   &__input:checked + .input-checkbox__label::before {
     @include sprite($s-checkbox-checked);
-    top: -5px;
-  }
-
-  &__input:checked + .input-checkbox__label--box-offset::before {
-    top: -7px;
   }
 
   &__label {
     @include text(21px, 25px, 700);
     position: relative;
     display: flex;
-    padding-left: 27px;
+    padding-top: 5px;
     color: $black;
+    white-space: nowrap;
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 23px;
+    }
 
     &::before {
       @include sprite($s-checkbox);
-      position: absolute;
-      top: 4px;
-      left: 0;
+      flex-shrink: 0;
       content: '';
+      margin-top: -5px;
+      margin-right: 4px;
     }
 
     &--offset {
@@ -30,9 +32,20 @@
 
     &--box-offset {
       &::before {
-        top: 2px;
-        left: 2px;
+        margin-right: 0;
+
+        @include tablet {
+          margin-right: 4px;
+        }
       }
+    }
+
+    &--word-wrap {
+      white-space: normal;
+    }
+
+    &--bug::before {
+      margin-top: -8px;
     }
 
     & span:nth-of-type(1) {
