@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <meta name="imagetoolbar" content="no">
+    <meta name="msthemecompatible" content="no">
+    <meta name="cleartype" content="on">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="theme-color" content="#efcf9c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="Vacancy test">
+    <meta name="keywords" content="html css pug scss javascript frontend">
+    <link href="css/style.min.css" rel="stylesheet">
+    <title>CSSSR Test</title>
+  </head>
+  <body>
+    <main class="page">
+      <header class="header page__header"><img class="header__logo" src="img/logo.png" width="154" height="52" alt="Логотип компании CSSSR">
+        <h1 class="header__title" aria-label="Профиль кандидата на вакансию HTML-верстальщик"></h1>
+      </header>
+      <div class="page__personal">
+        <h2 class="visually-hidden">Персональные данные</h2>
+        <div class="block-fields">
+          <div class="input-field block-fields__item">
+            <input class="input-field__input input-field__input--name" type="text" name="name" id="name" value="Винокурова Елизавета Олеговна"/>
+            <label class="input-field__label" for="name">Полное ФИО</label>
+          </div>
+          <div class="input-field block-fields__item">
+            <input class="input-field__input input-field__input--birth" type="text" name="birth" id="birth" value="1980"/>
+            <label class="input-field__label" for="birth">Год рождения</label>
+          </div>
+          <div class="input-field block-fields__item">
+            <input class="input-field__input input-field__input--home" type="text" name="home" id="home" value="г. Москва, Россия"/>
+            <label class="input-field__label" for="home">Место жительства</label>
+          </div>
+          <div class="input-field block-fields__item">
+            <input class="input-field__input input-field__input--skype" type="text" name="skype" id="skype" value="elizaveta.vinokurova"/>
+            <label class="input-field__label" for="skype">Скайп</label>
+          </div>
+          <div class="input-field block-fields__item">
+            <input class="input-field__input input-field__input--email" type="email" name="email" id="email" value="de.spring@gmail.com"/>
+            <label class="input-field__label" for="email">Почта</label>
+          </div>
+        </div>
+      </div>
+      <div class="page__skills">
+        <h2 class="page__subtitle">Расскажите о себе чекбоксами</h2>
+        <p class="page__text">
+          Отметьте чекбоксами пункты, которые соответствуют вашим скиллам.
+          Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей.
+          Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
+        </p>
+        <div class="block-checkboxes">
+          <div class="input-checkbox block-checkboxes__item">
+            <input class="input-checkbox__input visually-hidden" type="checkbox" name="bem" value="bem" checked="checked" id="bem"/>
+            <label class="input-checkbox__label" for="bem">БЭМ/OOCSS
+            </label>
+          </div>
+          <div class="input-checkbox block-checkboxes__item">
+            <input class="input-checkbox__input visually-hidden" type="checkbox" name="pug" value="pug" checked="checked" id="pug"/>
+            <label class="input-checkbox__label" for="pug">Pug (Jade)
+            </label>
+          </div>
+          <div class="input-checkbox block-checkboxes__item">
+            <input class="input-checkbox__input visually-hidden" type="checkbox" name="precss" value="precss" checked="checked" id="precss"/>
+            <label class="input-checkbox__label" for="precss">Stylus/LESS/SASS
+            </label>
+          </div>
+          <div class="input-checkbox block-checkboxes__item">
+            <input class="input-checkbox__input visually-hidden" type="checkbox" name="svg" value="svg" checked="checked" id="svg"/>
+            <label class="input-checkbox__label" for="svg">Работаю с SVG
+            </label>
+          </div>
+          <div class="input-checkbox block-checkboxes__item">
+            <input class="input-checkbox__input visually-hidden" type="checkbox" name="semantic" value="semantic" checked="checked" id="semantic"/>
+            <label class="input-checkbox__label" for="semantic">Верстаю семантично
+            </label>
+          </div>
+          <div class="input-checkbox block-checkboxes__item">
+            <input class="input-checkbox__input visually-hidden" type="checkbox" name="a11y" value="a11y" checked="checked" id="a11y"/>
+            <label class="input-checkbox__label" for="a11y">Accessibility (A11Y)
+            </label>
+          </div>
+          <div class="input-checkbox block-checkboxes__item">
+            <input class="input-checkbox__input visually-hidden" type="checkbox" name="js-vers" value="js-vers" id="js-vers"/>
+            <label class="input-checkbox__label" for="js-vers">ES2015/ES2016
+            </label>
+          </div>
+          <div class="input-checkbox block-checkboxes__item">
+            <input class="input-checkbox__input visually-hidden" type="checkbox" name="taskrunner" value="taskrunner" checked="checked" id="taskrunner"/>
+            <label class="input-checkbox__label" for="taskrunner">Gulp/GRUNT
+            </label>
+          </div>
+          <div class="input-checkbox block-checkboxes__item">
+            <input class="input-checkbox__input visually-hidden" type="checkbox" name="webpack" value="webpack" id="webpack"/>
+            <label class="input-checkbox__label" for="webpack">Webpack
+            </label>
+          </div>
+          <div class="input-checkbox block-checkboxes__item">
+            <input class="input-checkbox__input visually-hidden" type="checkbox" name="webgl" value="webgl" id="webgl"/>
+            <label class="input-checkbox__label" for="webgl">Дружу с WebGL
+            </label>
+          </div>
+          <div class="input-checkbox block-checkboxes__item">
+            <input class="input-checkbox__input visually-hidden" type="checkbox" name="jquery" value="jquery" checked="checked" id="jquery"/>
+            <label class="input-checkbox__label" for="jquery">jQuery
+            </label>
+          </div>
+          <div class="input-checkbox block-checkboxes__item">
+            <input class="input-checkbox__input visually-hidden" type="checkbox" name="angular" value="angular" id="angular"/>
+            <label class="input-checkbox__label" for="angular">Знаю/изучаю Angular
+            </label>
+          </div>
+          <div class="input-checkbox block-checkboxes__item">
+            <input class="input-checkbox__input visually-hidden" type="checkbox" name="react" value="react" id="react"/>
+            <label class="input-checkbox__label" for="react">Знаю/изучаю React
+            </label>
+          </div>
+          <div class="input-checkbox block-checkboxes__item">
+            <input class="input-checkbox__input visually-hidden" type="checkbox" name="node" value="node" id="node"/>
+            <label class="input-checkbox__label" for="node">Знаю/изучаю Node.js
+            </label>
+          </div>
+          <div class="input-checkbox block-checkboxes__item block-checkboxes__item--margin-bug">
+            <input class="input-checkbox__input visually-hidden" type="checkbox" name="git" value="git" checked="checked" id="git"/>
+            <label class="input-checkbox__label input-checkbox__label--box-offset" for="git">Использую Git
+            </label>
+          </div>
+          <div class="input-checkbox block-checkboxes__item block-checkboxes__item--margin-bug">
+            <input class="input-checkbox__input visually-hidden" type="checkbox" name="falcon-eye" value="falcon-eye" checked="checked" id="falcon-eye"/>
+            <label class="input-checkbox__label input-checkbox__label--box-offset" for="falcon-eye">С<span>глазомером</span><span>всё</span><span>ок</span>
+            </label>
+          </div>
+          <div class="input-checkbox block-checkboxes__item block-checkboxes__item--margin-bug">
+            <input class="input-checkbox__input visually-hidden" type="checkbox" name="read-blog" value="read-blog" id="read-blog"/>
+            <label class="input-checkbox__label input-checkbox__label--offset input-checkbox__label--box-offset  input-checkbox__label--bug" for="read-blog">Читаю<a href="http://blog.csssr.ru/">blog.csssr.ru</a>
+            </label>
+          </div>
+          <div class="input-checkbox block-checkboxes__item block-checkboxes__item--margin-bug">
+            <input class="input-checkbox__input visually-hidden" type="checkbox" name="lazy" value="lazy" id="lazy"/>
+            <label class="input-checkbox__label input-checkbox__label--offset input-checkbox__label--box-offset input-checkbox__label--bug" for="lazy">Я ленивый(-ая)
+            </label>
+          </div>
+          <div class="input-checkbox block-checkboxes__item block-checkboxes__item--margin-bug">
+            <input class="input-checkbox__input visually-hidden" type="checkbox" name="english" value="english" checked="checked" id="english"/>
+            <label class="input-checkbox__label input-checkbox__label--offset input-checkbox__label--box-offset input-checkbox__label--word-wrap input-checkbox__label--bug" for="english">У меня хороший английский
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="page__js">
+        <h2 class="page__subtitle page__subtitle--js">Уровень владения JavaScript</h2>
+        <div class="slider">
+          <div class="slider__area">
+            <div class="slider__control"></div>
+          </div>
+          <ul class="slider__list">
+            <li class="slider__item slider__item--no-js">Не владею</li>
+            <li class="slider__item slider__item--junior">Использую готовые решения</li>
+            <li class="slider__item slider__item--middle">Использую готовые решения и умею их переделывать</li>
+            <li class="slider__item slider__item--senior">Пишу сложный JS с нуля</li>
+          </ul>
+        </div>
+      </div>
+      <div class="page__about">
+        <h2 class="page__subtitle page__subtitle--about">Расскажите о себе словами</h2>
+        <p class="page__text page__text--offset">
+          Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR.
+          Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
+        </p>
+        <div class="page__text-field" contenteditable="true">Первое позитивное впечатление от того, что вакансия написана с некоторой долей юмора: приятно работать с людьми, которые умеют улыбаться в тексте. Современный, легкий для восприятия сайт, интересные проекты, – вот и захотелось присоединиться к общему делу.<br>Чего я ожидаю? Работы :-) Такой, чтобы было интересно, чтобы было над чем подумать, чтобы можно было сделать красиво.<br>Искренне надеюсь, что наши с CSSSR интересы совпадут и мы объединимся во имя общего блага :-D</div>
+      </div>
+      <div class="page__plans">
+        <h2 class="page__subtitle">Какие у вас планы на будущее?</h2>
+        <p class="page__text">Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.</p>
+        <div class="block-radio">
+          <div class="input-radio block-radio__item">
+            <input class="input-radio__input visually-hidden" type="radio" name="plans" id="layout"/>
+            <label class="input-radio__label" for="layout">Верстать</label>
+          </div>
+          <div class="input-radio block-radio__item">
+            <input class="input-radio__input visually-hidden" type="radio" name="plans" checked="checked" id="js"/>
+            <label class="input-radio__label" for="js">Прокачиваться в JS</label>
+          </div>
+          <div class="input-radio block-radio__item">
+            <input class="input-radio__input visually-hidden" type="radio" name="plans" id="manager"/>
+            <label class="input-radio__label" for="manager">Менеджерство</label>
+          </div>
+          <div class="input-radio block-radio__item">
+            <input class="input-radio__input visually-hidden" type="radio" name="plans" id="another"/>
+            <label class="input-radio__label" for="another">Другое</label>
+          </div>
+        </div>
+      </div>
+      <div class="page__date">
+        <div class="input-field">
+          <input class="input-field__input input-field__input--date" type="text" name="date" id="date" value="10.05.2019"/>
+          <label class="input-field__label" for="date">Дата заполнения</label>
+        </div>
+      </div>
+    </main>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>
